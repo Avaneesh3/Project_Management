@@ -1,21 +1,34 @@
 import numpy as np
 class tasks:
-    def __init__(self,deadline,users,resources):
-        self.deadline = deadline
-        self.users = users
-        self.resources = resources
+    def __init__(self,task_number,task_deadline,users_required,resources_required):
+        self.task_number = task_number
+        self.task_deadline = task_deadline
+        self.users_required = users_required                   #users_required[user_type] = count_required
+        self.resources_required = resources_required           #resources_required[resource_type] = count_required
 
     def schedule(start_date = 0):
-        return task_completion_date 
+        return task_completion_date       
             
-class utilities:
-    def __init__(self,status,available_in_days,util_type,util_subtype):
-        self.status = status
-        self.available_in_days = available_in_days
-        self.util_type = util_type
-        self.util_subtype = util_subtype
+class users:
+    def __init__(self,user_type,users_available,users_engaged):
+        self.user_type = user_type
+        self.users_available = users_available
+        self.users_engaged = users_engaged
+
+    def get_user_summary():
+        return 
         
-    def count_available_utils(util_type,util_subtype,required_count):
+    def count_available_users(user_type,required_count):
+        return date_when_count_available
+
+
+class resources:
+    def __init__(self,resource_type,resources_available,resources_engaged):
+        self.resource_type = resource_type
+        self.resources_available = resources_available
+        self.resources_engaged = resources_engaged
+        
+    def count_available_resources(resource_type,required_count):
         return date_when_count_available
     
     
