@@ -11,10 +11,10 @@ Given the tasks,dependencies,users,resources and the time taken for each task we
 whether the project can be completed within the total number of days.
  
 Classes:
-1.Class tasks
-2.Class users
-3.Class resources
-4.Class project_manager
+(1)Class tasks
+(2)Class users
+(3)Class resources
+(4)Class project_manager
 
 
 Algorithm:
