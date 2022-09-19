@@ -10,11 +10,11 @@ class tasks:
         return task_completion_date       
             
 class users:
-    def __init__(self,user_type,users_available,users_engaged):
+    def __init__(self,user_type,users_available,users_engaged,users_engaged_for_days):
         self.user_type = user_type
         self.users_available = users_available
         self.users_engaged = users_engaged
-
+        self.users_engaged_for_days = users_engaged_for_days
     def get_user_summary():
         return 
         
@@ -23,40 +23,28 @@ class users:
 
 
 class resources:
-    def __init__(self,resource_type,resources_available,resources_engaged):
+    def __init__(self,resource_type,resources_available,resources_engaged,resources_engaged_for_days):
         self.resource_type = resource_type
         self.resources_available = resources_available
         self.resources_engaged = resources_engaged
+        self.resources_engaged_for_days = resources_engaged_for_day
         
     def count_available_resources(resource_type,required_count):
         return date_when_count_available
-    
-    
-class schedule:
-    def __init__(self,task_deadlines,dependencies):
-        self.task_deadlines = task_deadlines      #task_deadlines[task_name] = deadline
-        self.dependencies = dependencies
-        
-    def sort_deadlines(task_deadlines):                    #tasks_sorted_by_deadlines[task_name] = index of eadline in sorted_deadlines
-        sorted_deadlines = sorted(list(task_deadlines.values()))
-        tasks_sorted_by_deadlines = {}
-        for i in range(task_deadlines.keys()):
-            tasks_sorted_by_deadlines[i] = sorted_deadlines.index(task_deadlines[i])
-        return tasks_sorted_by_deadlines
-        
-    def topsortlist(AMat):
-	return topsortlist
-           
-            
-                
-    
-    
-    
-        
-        
-        
-def project_allocate(end_date,project):
-	if j.schedule() < j.deadline:
-                
-            else:
-                return "fail"
+
+
+class project_manager:
+    def __init__(self,tasks_list,task_dependencies,users_list,resources_list):
+        self.tasks_list = tasks_list                   #list of instances of task
+        self.task_dependencies = task_dependencies     #task_dependencies[task_number] = [list of task_numbers]
+        self.users_list = users_list                   #list of instances of users
+        self.resources_list = resources_list           #list of instances of resources 
+
+    def create_matrix(task_dependencies):
+        return matrix_of_dependencies             
+
+    def task_completion_date(tasks_list[i]):
+        return task_completion_date
+
+    def get_schedule(task_number,start_date = 0):
+        return task_completion_date 
